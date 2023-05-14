@@ -4,7 +4,7 @@ import IconDefault from "../assets/img/ic_default.png";
 const Header = () => {
   return (
     <>
-      <header className="flex items-center justify-between px-4 py-3 bg-[#0B2551]">
+      <header className="header header-expand-md flex items-center justify-between top-0 z-50 fixed sticky px-4 py-3 bg-[#0B2551]">
         <div>
           <img src={Logo} alt="" className="ml-24" />
         </div>

@@ -30,22 +30,22 @@ const LoginPage = () => {
     dispatch(LoginUser({ username, password }));
   };
   return (
-    <div class="flex bg-[#D4D7DC] justify-center w-[1440px] h-[1024px]">
-      <div class="justify-center bg-[#021432] w-[1333px] h-[892px] mt-10 rounded-[40px]">
-        <div class="flex bg-[#0B2551] h-[84px] w-[1333px] items-center justify-between rounded-t-[40px] pl-20 pr-10"></div>
-        <div class="flex justify-between"></div>
-        <div class="flex justify-center mt-[12px]">
-          <div class="flex justify-center bg-[#D9D9D9] w-[843px] h-[601px] rounded-[100px]">
+    <div className="flex bg-[#D4D7DC] justify-center w-[1440px] h-[1024px]">
+      <div className="justify-center bg-[#021432] w-[1333px] h-[892px] mt-10 rounded-[40px]">
+        <div className="flex bg-[#0B2551] h-[84px] w-[1333px] items-center justify-between rounded-t-[40px] pl-20 pr-10"></div>
+        <div className="flex justify-between"></div>
+        <div className="flex justify-center mt-[12px]">
+          <div className="flex justify-center bg-[#D9D9D9] w-[843px] h-[601px] rounded-[100px]">
             <div>
-              <div class="flex justify-center mt-[24px]">
-                <img class="w-[150px] h-[150px]" src={Logo} alt="" />
+              <div className="flex justify-center mt-[24px]">
+                <img className="w-[150px] h-[150px]" src={Logo} alt="" />
               </div>
-              <h1 class="flex justify-center text-[64px]">Masuk</h1>
-              <div class="flex flex-col">
+              <h1 className="flex justify-center text-[64px]">Masuk</h1>
+              <div className="flex flex-col">
                 <form onSubmit={Auth}>
-                  <div class="mt-[22px]">
+                  <div className="mt-[22px]">
                     <input
-                      class="shadow appearance-none border rounded-[10px] w-[466px] h-[77px] py-[19px] px-[30px] text-[32px] text-white bg-[#00509D] leading-tight focus:outline-none focus:shadow-outline placeholder-white"
+                      className="shadow appearance-none border rounded-[10px] w-[466px] h-[77px] py-[19px] px-[30px] text-[32px] text-white bg-[#00509D] leading-tight focus:outline-none focus:shadow-outline placeholder-white"
                       id="username"
                       value={username}
                       onChange={(e) => setUsername(e.target.value)}
@@ -53,9 +53,9 @@ const LoginPage = () => {
                       placeholder="Nama Pengguna"
                     />
                   </div>
-                  <div class="mt-[22px]">
+                  <div className="mt-[22px]">
                     <input
-                      class="shadow appearance-none border rounded-[10px] w-[466px] h-[77px] py-[19px] px-[30px] text-[32px] text-white bg-[#FDC500] leading-tight focus:outline-none focus:shadow-outline placeholder-white"
+                      className="shadow appearance-none border rounded-[10px] w-[466px] h-[77px] py-[19px] px-[30px] text-[32px] text-white bg-[#FDC500] leading-tight focus:outline-none focus:shadow-outline placeholder-white"
                       id="username"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
@@ -63,14 +63,13 @@ const LoginPage = () => {
                       placeholder="Kata Sandi"
                     />
                   </div>
-                  <div class="flex justify-center mt-[45px]">
-                    <Link
-                      to="/pages/dashboard"
+                  <div className="flex justify-center mt-[45px]">
+                    <button
                       type="submit"
-                      class="bg-[#021432] text-center py-2 text-white text-[24px] w-[217px] h-[52px] rounded-[50px]"
+                      className="bg-[#021432] text-center py-2 text-white text-[24px] w-[217px] h-[52px] rounded-[50px]"
                     >
                       Masuk
-                    </Link>
+                    </button>
                   </div>
                 </form>
               </div>
@@ -80,7 +79,7 @@ const LoginPage = () => {
         <div>
           <button>
             <img
-              class="w-[30px] h-[32px] mt-[65px] ml-[1217px] mr-[75px]"
+              className="w-[30px] h-[32px] mt-[65px] ml-[1217px] mr-[75px]"
               src={Help}
               alt=""
             />

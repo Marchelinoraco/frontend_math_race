@@ -51,15 +51,15 @@ const AddStudent = () => {
       <div>
         <div
           id="popup-modal"
-          tabindex="-1"
-          class={`${
+          tabIndex="-1"
+          className={`${
             openModal ? "flex" : "hidden"
           } fixed top-0 left-0 right-0 z-50 justify-center items-center  p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full`}
         >
-          <div class="relative w-full max-w-md max-h-full">
-            <div class="relative bg-white rounded-lg shadow">
-              <div class="p-6 text-center">
-                <h3 class="text-lg font-normal text-gray-500 dark:text-gray-400">
+          <div className="relative w-full max-w-md max-h-full">
+            <div className="relative bg-white rounded-lg shadow">
+              <div className="p-6 text-center">
+                <h3 className="text-lg font-normal text-gray-500 dark:text-gray-400">
                   Data Berhasil Ditambahkan
                 </h3>
               </div>

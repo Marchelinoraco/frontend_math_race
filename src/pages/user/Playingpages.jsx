@@ -3,16 +3,13 @@ import axios from "axios";
 import Logo from "../../assets/img/Logokecil.png";
 import Bantuan from "../../assets/img/bantuan.png";
 import Back from "../../assets/img/Back.png";
-import Home from "../../assets/img/Home.png";
 import { Link } from "react-router-dom";
-import { useLinkClickHandler } from "react-router-dom";
 import Bidakkali from "../../assets/img/Bidak ×.png";
 import Bidakbagi from "../../assets/img/Bidak ÷.png";
 import Bidakkurang from "../../assets/img/Bidak -.png";
 import Bidaktambah from "../../assets/img/Bidak +.png";
 import Navhome from "../../assets/img/navhome.png";
 import timer from "../../assets/img/timer1.png";
-import polygon from "../../assets/img/Polygon 1.png";
 import DiceOne from "../../assets/img/dice_one.png";
 import DiceTwo from "../../assets/img/dice_two.png";
 import DiceThree from "../../assets/img/dice_three.png";
@@ -27,7 +24,6 @@ const Playingpages = () => {
   const [countPlayer, setCountPlayer] = useState(0);
   const [numberDice, setNumberDice] = useState(1);
   const [second, setSecond] = useState(5);
-  const [bidak, setBidak] = useState();
   const [timeLeft, setTimeLeft] = useState(second);
   const [questions, setQuestions] = useState([]);
   const [number, setNumber] = useState(1);
@@ -302,10 +298,9 @@ const Playingpages = () => {
                           Pemain 1
                         </label>
                         <select
-                          className="rounded-lg bg-[#FDC500] text-black p-2"
+                          className="rounded-lg bg-[#FDC500] text-black py-2 px-5"
                           name=""
                           id=""
-                          defaultValue=""
                         >
                           <option
                             value="none"
@@ -334,7 +329,7 @@ const Playingpages = () => {
                           Pemain 2
                         </label>
                         <select
-                          className="rounded-lg bg-[#FDC500] text-black p-2"
+                          className="rounded-lg bg-[#FDC500] text-black py-2 px-5"
                           name=""
                           id=""
                         >
@@ -365,7 +360,7 @@ const Playingpages = () => {
                           Pemain 3
                         </label>
                         <select
-                          className="rounded-lg bg-[#FDC500] text-black p-2"
+                          className="rounded-lg bg-[#FDC500] text-black py-2 px-5"
                           name=""
                           id=""
                         >
@@ -391,7 +386,7 @@ const Playingpages = () => {
                 {countPlayer >= 4 ? (
                   <>
                     <div className="flex flex-col items-center justify-center">
-                      <div className="flex flex-col space-y-3 bg-[#00509D] rounded-md p-4">
+                      <div className="flex flex-col space-y-3 bg-[#00509D] rounded-md py-2 px-5">
                         <label className="text-[24px] text-white text-center">
                           Pemain 4
                         </label>
@@ -437,7 +432,7 @@ const Playingpages = () => {
     case 3:
       currentPage = (
         <>
-          <div className="flex w-full h-20 px-8 justify-between items-center bg-[#1D3D73]">
+          <div className="navbar navbar-expand-md top-0 z-50 flex w-full h-20 px-8 justify-between items-center fixed sticky bg-[#1D3D73]">
             <div>
               <img src={Bantuan} alt="" />
             </div>
@@ -453,56 +448,72 @@ const Playingpages = () => {
           <div className="flex text-white w-full h-screen">
             <div className="flex flex-col justify-center items-center bg-[#021432] h-screen p-4 w-[30%]">
               <div className="flex items-center justify-between p-4 space-x-6">
-                <h4>Soal</h4>
+                <h4 className="font-bold text-[25px]">Soal</h4>
                 <div className="flex space-x-1 items-center justify-center">
                   <img src={timer} alt="" />
-                  <p className="text-white">Waktu tersisa: {seconds} detik</p>
+                  <p className="text-white font-bold">
+                    Waktu tersisa: {seconds} detik
+                  </p>
                 </div>
               </div>
               <div className="w-full">
                 <div className="bg-[#00509D] w-full rounded-lg p-10">
-                  <p className="text-center">{question.name}</p>
+                  <p className="text-center font-bold text-[24px]">
+                    {question.name}
+                  </p>
                 </div>
               </div>
               <div className="flex flex-col space-y-4 mt-4 w-full p-4">
-                <button className="bg-[#EAC301] w-full p-4 rounded-md">
+                <button className="bg-[#EAC301] w-full p-4 rounded-md font-bold hover:bg-[#00509D]">
                   {question.optionOne}
                 </button>
-                <button className="bg-[#EAC301] w-full p-4 rounded-md">
+                <button className="bg-[#EAC301] w-full p-4 rounded-md font-bold hover:bg-[#00509D]">
                   {question.optionTwo}
                 </button>
-                <button className="bg-[#EAC301] w-full p-4 rounded-md">
+                <button className="bg-[#EAC301] w-full p-4 rounded-md font-bold hover:bg-[#00509D]">
                   {question.optionThree}
                 </button>
               </div>
               <div className="side w-full flex flex-col justify-center items-center">
                 <div className="bg-[#00509D] px-12 py-8 rounded-3xl w-max">
-                  <div>
+                  <div
+                    className={`${numberDice === 1 ? "animate-dice-spin" : ``}`}
+                  >
                     {numberDice === 1 ? (
                       <img src={DiceOne} alt="" className="w-10 h-10" />
                     ) : null}
                   </div>
-                  <div>
+                  <div
+                    className={`${numberDice === 2 ? "animate-dice-spin" : ``}`}
+                  >
                     {numberDice === 2 ? (
                       <img src={DiceTwo} alt="" className="w-10 h-10" />
                     ) : null}
                   </div>
-                  <div>
+                  <div
+                    className={`${numberDice === 3 ? "animate-dice-spin" : ``}`}
+                  >
                     {numberDice === 3 ? (
                       <img src={DiceThree} alt="" className="w-10 h-10" />
                     ) : null}
                   </div>
-                  <div>
+                  <div
+                    className={`${numberDice === 4 ? "animate-dice-spin" : ``}`}
+                  >
                     {numberDice === 4 ? (
                       <img src={DiceFour} alt="" className="w-10 h-10" />
                     ) : null}
                   </div>
-                  <div>
+                  <div
+                    className={`${numberDice === 5 ? "animate-dice-spin" : ``}`}
+                  >
                     {numberDice === 5 ? (
                       <img src={DiceFive} alt="" className="w-10 h-10" />
                     ) : null}
                   </div>
-                  <div>
+                  <div
+                    className={`${numberDice === 6 ? "animate-dice-spin" : ``}`}
+                  >
                     {numberDice === 6 ? (
                       <img src={DiceSix} alt="" className="w-10 h-10" />
                     ) : null}
