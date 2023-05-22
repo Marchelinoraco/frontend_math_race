@@ -9,6 +9,7 @@ import DataStudents from "./students/DataStudents";
 import UpdateStudent from "./students/UpdateStudent";
 import { useDispatch, useSelector } from "react-redux";
 import { LogOut, getMe, reset } from "../../features/authSlice";
+import Result from "./Result";
 
 const MainAdmin = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -40,7 +41,7 @@ const MainAdmin = () => {
         <div className="w-[20%] bg-[#0B2551] h-screen flex justify-between py-10 flex-col items-center">
           <nav>
             <ul className="flex flex-col justify-center items-center space-y-4 text-white">
-              <li className="py-6 w-full text-center text-[30px] hover:bg-[#EAC301]">
+              <li className="py-6 px-20 w-full text-center text-[30px] hover:bg-[#EAC301]">
                 <Link to="./dashboard">Dashboard</Link>
               </li>
               <li className="py-6 w-full text-center text-[30px] hover:bg-[#EAC301]">
@@ -48,6 +49,9 @@ const MainAdmin = () => {
               </li>
               <li className="py-6 w-full text-center text-[30px] hover:bg-[#EAC301]">
                 <Link to="./data-students">Data Siswa</Link>
+              </li>
+              <li className="py-6 w-full text-center text-[30px] hover:bg-[#EAC301]">
+                <Link to="./result">Hasil Permainan</Link>
               </li>
             </ul>
           </nav>
@@ -72,6 +76,8 @@ const MainAdmin = () => {
               <Route path="/add-question" element={<AddQuestion />} />
               <Route path="/data-questions" element={<DataQuestions />} />
               <Route path="/update-question" element={<DataQuestions />} />
+              {/*Result*/}
+              <Route path="/result" element={<Result />} />
             </Routes>
           </div>
         </div>

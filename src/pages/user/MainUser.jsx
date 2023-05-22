@@ -14,8 +14,9 @@ const MainUser = () => {
     <>
       <div>
         <Routes>
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/playing" element={<Playingpages />} />
+          <Route path="/contoh" element={<PlayBoardMedium />} />
         </Routes>
       </div>
     </>

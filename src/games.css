@@ -1,0 +1,50 @@
+/* game.css */
+
+body {
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+#diceCont {
+  margin-top: 20px;
+}
+
+#diceBtn {
+  margin-top: 10px;
+}
+
+/* .cont {
+  display: grid;
+  flex-wrap: wrap;
+  width: 500px;
+  margin: 20px auto;
+} */
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid #021432;
+  background-color: #eac301;
+  color: #000;
+}
+
+.box.red-player {
+  background-color: red;
+  color: #fff;
+}
+
+.box.yellow-player {
+  background-color: yellow;
+  color: #000;
+}
+
+/* img {
+  width: 400px;
+  margin-top: 20px;
+} */
