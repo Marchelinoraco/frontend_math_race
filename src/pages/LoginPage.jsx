@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { LoginUser, reset } from "../features/authSlice";
+import Navhome from "../assets/img/navhome.png";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
@@ -32,7 +33,11 @@ const LoginPage = () => {
   return (
     <div className="flex bg-[#D4D7DC] justify-center w-[1440px] h-[1024px]">
       <div className="justify-center bg-[#021432] w-[1333px] h-[892px] mt-10 rounded-[40px]">
-        <div className="flex bg-[#0B2551] h-[84px] w-[1333px] items-center justify-between rounded-t-[40px] pl-20 pr-10"></div>
+        <div className="flex bg-[#0B2551] h-[84px] w-[1333px] items-center justify-between rounded-t-[40px] pl-20 pr-10">
+          <Link to={"/"}>
+            <img src={Navhome} alt="" />
+          </Link>
+        </div>
         <div className="flex justify-between"></div>
         <div className="flex justify-center mt-[12px]">
           <div className="flex justify-center bg-[#D9D9D9] w-[843px] h-[601px] rounded-[100px]">

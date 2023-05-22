@@ -62,7 +62,7 @@ const DataQuestions = () => {
                 <td>Aksi</td>
               </tr>
             </thead>
-            <tbody className="bg-white ">
+            <tbody className="bg-white text-black">
               {data.map((item, number) => (
                 <tr key={number + 1}>
                   <td>{number + 1}</td>

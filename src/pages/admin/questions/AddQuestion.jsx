@@ -96,7 +96,7 @@ const AddQuestion = () => {
             >
               <option value="a">A</option>
               <option value="b">B</option>
-              <option value="b">C</option>
+              <option value="c">C</option>
             </select>
           </div>
           <div className="flex space-x-3 items-center">

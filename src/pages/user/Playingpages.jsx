@@ -204,10 +204,34 @@ const Playingpages = () => {
     if (question.answer === answer) {
       setEnabled(true);
       setCheck(true);
+      if (number === questions.length) {
+        setNumber(1);
+      } else {
+        setNumber((number) => number + 1);
+      }
+      if (level === "easy") {
+        setTimeLeft(30);
+      } else if (level === "medium") {
+        setTimeLeft(20);
+      } else {
+        setTimeLeft(10);
+      }
 
       openToast();
     } else {
       setCheck(false);
+      if (number === questions.length) {
+        setNumber(1);
+      } else {
+        setNumber((number) => number + 1);
+      }
+      if (level === "easy") {
+        setTimeLeft(30);
+      } else if (level === "medium") {
+        setTimeLeft(20);
+      } else {
+        setTimeLeft(10);
+      }
       openToast();
       setPlayerTurn(playerTurn === "Red" ? "Yellow" : "Red");
     }
@@ -418,6 +442,9 @@ const Playingpages = () => {
                   src={Logo}
                   alt=""
                 />
+                <Link to={"/"}>
+                  <img src={Navhome} alt="" />
+                </Link>
               </div>
 
               <div className="flex text-white w-full h-screen rounded-xl">
@@ -466,32 +493,56 @@ const Playingpages = () => {
                     <div className="bg-[#00509D] px-12 py-8 rounded-3xl w-max">
                       <div>
                         {numberDice === 1 ? (
-                          <img src={DiceOne} alt="" className="w-10 h-10" />
+                          <img
+                            src={DiceOne}
+                            alt=""
+                            className="w-10 h-10 animate-dice-spin"
+                          />
                         ) : null}
                       </div>
                       <div>
                         {numberDice === 2 ? (
-                          <img src={DiceTwo} alt="" className="w-10 h-10" />
+                          <img
+                            src={DiceTwo}
+                            alt=""
+                            className="w-10 h-10 animate-dice-spin"
+                          />
                         ) : null}
                       </div>
                       <div>
                         {numberDice === 3 ? (
-                          <img src={DiceThree} alt="" className="w-10 h-10" />
+                          <img
+                            src={DiceThree}
+                            alt=""
+                            className="w-10 h-10 animate-dice-spin"
+                          />
                         ) : null}
                       </div>
                       <div>
                         {numberDice === 4 ? (
-                          <img src={DiceFour} alt="" className="w-10 h-10" />
+                          <img
+                            src={DiceFour}
+                            alt=""
+                            className="w-10 h-10 animate-dice-spin"
+                          />
                         ) : null}
                       </div>
                       <div>
                         {numberDice === 5 ? (
-                          <img src={DiceFive} alt="" className="w-10 h-10" />
+                          <img
+                            src={DiceFive}
+                            alt=""
+                            className="w-10 h-10 animate-dice-spin"
+                          />
                         ) : null}
                       </div>
                       <div>
                         {numberDice === 6 ? (
-                          <img src={DiceSix} alt="" className="w-10 h-10" />
+                          <img
+                            src={DiceSix}
+                            alt=""
+                            className="w-10 h-10 animate-dice-spin"
+                          />
                         ) : null}
                       </div>
                     </div>

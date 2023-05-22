@@ -50,9 +50,9 @@ const MainAdmin = () => {
               <li className="py-6 w-full text-center text-[30px] hover:bg-[#EAC301]">
                 <Link to="./data-students">Data Siswa</Link>
               </li>
-              <li className="py-6 w-full text-center text-[30px] hover:bg-[#EAC301]">
+              {/* <li className="py-6 w-full text-center text-[30px] hover:bg-[#EAC301]">
                 <Link to="./result">Hasil Permainan</Link>
-              </li>
+              </li> */}
             </ul>
           </nav>
           <button
@@ -76,8 +76,8 @@ const MainAdmin = () => {
               <Route path="/add-question" element={<AddQuestion />} />
               <Route path="/data-questions" element={<DataQuestions />} />
               <Route path="/update-question" element={<DataQuestions />} />
-              {/*Result*/}
-              <Route path="/result" element={<Result />} />
+              {/* Result */}
+              {/* <Route path="/result" element={<Result />} /> */}
             </Routes>
           </div>
         </div>
